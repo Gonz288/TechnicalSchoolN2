@@ -1,0 +1,495 @@
+
+*{font-family:'Times New Roman', Times, serif;}
+/*--------------------------------------------- ScrollBar---------------------------------------------*/
+::-webkit-scrollbar{
+width: 12px;
+background-color: #000000ef; }
+
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #00B573; }
+
+
+::-webkit-scrollbar-track{
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #00000057;
+border-radius: 10px; }
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-directivo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-directivo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-directivo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-directivo-controles .indicadores button:hover,
+.contenedor-directivo-controles .indicadores button.activo {
+	background: green;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.directivos {
+	margin-bottom: 10px;
+}
+
+.directivos .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.directivos .contenedor-principal .flecha-izquierda,
+.directivos .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 30%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 40px;
+	color: #00B573;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.directivos .contenedor-principal .flecha-izquierda:hover,
+.directivos .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.directivos.contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.directivos .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.directivos .contenedor-carousel {
+	width: 100%;
+	padding: 5px ;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.directivos .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.directivos .contenedor-carousel .carousel .directivo {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0);
+	padding: 0px 5px;
+}
+
+.directivos .contenedor-carousel .carousel .directivo.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.directivos .contenedor-carousel .carousel .directivo img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	
+	.directivos .contenedor-principal .flecha-izquierda,
+	.directivos .contenedor-principal .flecha-derecha {
+		position: absolute;
+		border: none;
+		background: rgba(0,0,0,0.3);
+		font-size: 40px;
+		height: 20%;
+		top: calc(50% - 25%);
+		line-height: 40px;
+		width: 30px;
+		color: #00B573;
+		cursor: pointer;
+		z-index: 500;
+		transition: .2s ease all;
+	}
+
+	.directivos .contenedor-carousel .carousel .directivo {
+		min-width: 100%;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 0px rgba(0,0,0,0);
+		padding: 0px 2px;
+	}
+}
+/*---------------------------------------------Pagina principal--------------------------------------------- */
+.carousel-inner img{width: 100%; height: 100vh; filter:brightness(0.3);}
+.Map{text-align: center;}
+.Map .mapa{width: 450px;height: 400px;}
+.logo-brand{width: 55px;}
+.navbar .navbar-brand{font-size:120%;}
+.top-nav-collapse{background: #212529;}
+.carousel-inner .carousel-item .carousel-caption{position: absolute;top: 40%;}
+.carousel-caption h1{display:inline-block; position: relative; font-family: 'Georgia'; font-size: 3.5rem; font-weight: 600; letter-spacing: 0.1rem;}
+.carousel-caption h2{font-family: 'Georgia';font-size: 2.0rem;font-weight: 600;letter-spacing: 0.1rem;margin-top:-5px;}
+.colornegro{background:rgba(0, 0, 0, 0.774);}
+.barras{
+    content:'';
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    margin-top: 74px;
+    margin-left:15px;
+    background-color: #fff;
+}
+.barras2{
+    content:'';
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    margin-top: 74px;
+    margin-left:-210px;
+    background-color: #fff;
+}
+
+/*---------------------------------------------------Menu---------------------------------------------------*/
+.navbar .collapse ul li .nav-link{font-weight: 700; font-size: 125%!important; color: #fff; margin-top: 4px;}
+.navbar .collapse ul li .nav-link.active{color:green!important;}
+.navbar .collapse ul li .nav-link:hover{color:green!important;}
+.nav-item .dropdown-menu{background: #31373d; margin-left: -10px!important;border-radius: 5px;}
+.nav-item .dropdown-menu i{font-size: 90%!important;}
+.nav-item .dropdown-menu a{color: #fff!important; font-size: 110%!important; border-radius: 5px;}
+.nav-item .dropdown-menu a:hover{ color: green!important; background: rgba(0, 0, 0, 0.3);}
+.nav-item .dropdown-menu a{background: none;}
+.navbar .login{border-radius: 10px;}
+.redes .redsocial{border-radius: 10px;}
+.modal-content .card-header i{color: rgb(1, 202, 1);}
+.modal-content .card-header {color: rgb(255, 255, 255);}
+#form .boton{border-radius: 20px; color: rgb(255, 255, 255);}
+#form .arriba{margin-top: -1px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;}
+#cosas .redes button{font-size: 270%; width: 700px;}
+#cosas .redes button i{align-items: center;}
+#cosas .row .redes .insta{background-image: linear-gradient(to top right, rgb(255, 251, 0) , rgb(255, 0, 0), rgb(119, 0, 255)); color: white;}
+
+/*-------------------------------------------------Tarjetas-------------------------------------------------*/
+#team{
+    font-family: Georgia;
+    width: 92%;
+    margin: auto;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+
+}
+#team .card{
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s sease-in;
+}
+#team .tercercard{
+    margin-left: auto;
+    margin-right: auto;
+}
+#team p{
+    font-family: Georgia;
+    color:#333333;
+    font-size: 1.0rem;
+}
+#team .card i{
+    color: #00C34A;
+    font-size: 3.5rem;
+}
+#team .card h3{
+    font-family: Georgia;
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+#team .card:hover{
+	border-radius: 5px;
+    box-shadow: 5px 5px 15px #333333;
+}
+/*---------------------------------------------Materias, Mapa, etc.---------------------------------------------*/
+
+#cosas{
+    width: 92%;
+    margin: auto;
+}
+#cosas .button_material{
+	text-align: center;
+}
+
+#cosas .button_material a button{
+	font-family:Arial, Helvetica, sans-serif;
+	color: rgb(240, 240, 240);
+	font-size: 1.5rem;
+	font-weight: bold;
+	border-radius: 7px;
+	box-shadow: 5px 3px black;
+}
+
+
+
+/*---------------------------------------------Footer---------------------------------------------*/
+.page-footer .container2 p{
+    font-size: 110%;
+}
+.page-footer h6{
+    font-size: 120%;
+}
+/* */
+
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-directivo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-directivo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-directivo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-directivo-controles .indicadores button:hover,
+.contenedor-directivo-controles .indicadores button.activo {
+	background: green;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.directivos {
+	margin-bottom: 10px;
+}
+
+.directivos .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.directivos .contenedor-principal .flecha-izquierda,
+.directivos .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 30%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 40px;
+	color: #00B573;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.directivos .contenedor-principal .flecha-izquierda:hover,
+.directivos .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.directivos.contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.directivos .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.directivos .contenedor-carousel {
+	width: 100%;
+	padding: 5px ;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.directivos .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.directivos .contenedor-carousel .carousel .directivo {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0);
+	padding: 0px 5px;
+}
+
+.directivos .contenedor-carousel .carousel .directivo.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.directivos .contenedor-carousel .carousel .directivo img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	
+	.directivos .contenedor-principal .flecha-izquierda,
+	.directivos .contenedor-principal .flecha-derecha {
+		position: absolute;
+		border: none;
+		background: rgba(0,0,0,0.3);
+		font-size: 40px;
+		height: 20%;
+		top: calc(50% - 25%);
+		line-height: 40px;
+		width: 30px;
+		color: #00B573;
+		cursor: pointer;
+		z-index: 500;
+		transition: .2s ease all;
+	}
+
+	.directivos .contenedor-carousel .carousel .directivo {
+		min-width: 100%;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 0px rgba(0,0,0,0);
+		padding: 0px 2px;
+	}
+}
+/*-----------------------------------------------Resoluciones-----------------------------------------------*/
+
+@media screen and (max-width: 1530px){
+	#directivos{width: 82%;}
+	#cosas .redes button{
+		font-size: 270%;
+		width: 500px;
+	}
+}
+
+@media screen and (max-width: 1199px){
+	.carousel-inner img{height: 450px;}
+	.navbar .collapse ul li .nav-link{font-size: 110%!important;}
+	#navbar .collapse ul li .nav-link{background-color: rgba(0, 0, 0, 0.87); width: 17%; text-align: center; border-radius: 10px;}
+	.nav-item .dropdown-menu a{font-size: 100%!important;}
+	.logo-brand{max-width: 38px;}
+	.navbar .navbar-brand{font-size:110%;}
+	.Map .mapa{offset: none;  width: 400px; height: 400px;}
+	.carousel-inner .carousel-item .carousel-caption{position: absolute;top: 38%;}
+	.carousel-caption h1{font-family: 'Georgia';font-size: 2.1rem;font-weight: 600;letter-spacing: 0.1rem;}
+	.carousel-caption h2{font-family: 'Georgia';font-size: 1.1rem;font-weight: 600;letter-spacing: 0.1rem;}
+	#team{width: 88%;}
+	#team p{font-size: 0.9rem;}
+	#team .card i{font-size: 3.4rem;}
+	#team .card h3{font-size: 1.3rem;}
+	.barras{width: 140px; height: 3px; margin-top: 32px; margin-left:12px;}
+	.barras2{ width: 140px; height: 3px; margin-top: 32px; margin-left: -155px;}
+	#directivos{width: 100%;}
+	#cosas .redes button{
+		font-size: 240%;
+		width: 700px;
+	}
+	.page-footer .container2 p{
+		font-size: 90%;
+	}
+	.page-footer h6{
+		font-size: 100%;
+	}
+}
+
+@media screen and (max-width: 990px){
+	#navbar .collapse ul li .nav-link{width: 25%; }
+    #cosas .redes button{
+        font-size: 220%;
+        width: 500px;
+    }
+    .page-footer .container2 p{
+        font-size: 110%;
+    }
+    .page-footer h6{
+        font-size: 120%;
+    }
+    .page-footer hr{
+        width: 150px!important;
+    }
+}
+
+@media screen and (max-width: 800px){
+	.carousel-caption h1{font-family: 'Georgia';font-size: 1.5rem;font-weight: 600;letter-spacing: 0.1rem;}
+	.carousel-caption h2{font-family: 'Georgia';font-size: 0.9rem;font-weight: 600;letter-spacing: 0.1rem;}
+	.barras{width: 80px; height: 2px; margin-top: 32px; margin-left:1px;}
+	.barras2{ width: 80px; height: 2px; margin-top: 32px; margin-left: -80px;}
+	#cosas .button_material a button{font-size: 15px;}
+}
+
+@media screen and (max-width: 767px){
+	#navbar .collapse ul li .nav-link{width: 34%;}
+    #cosas .redes button{
+        font-size: 140%;
+        width: 350px;
+    }
+}
+
+
+@media screen and (max-width: 520px){
+	#navbar .collapse ul li .nav-link{width: 40%;}
+	.carousel-inner img{height: 350px;}
+	.navbar .collapse ul li .nav-link{font-size: 80%!important;}
+	.nav-item .dropdown-menu a{ font-size: 75%!important;}
+	.logo-brand{max-width: 30px;}
+	.navbar .navbar-brand{font-size:90%;}
+	.Map .mapa{offset: none; width: 225px;height: 210px;}
+	.carousel-inner .carousel-item .carousel-caption{position: absolute;top: 35%;}
+	.carousel-caption h1{font-family: 'Georgia';font-size: 1.0rem;font-weight: 600;letter-spacing: 0.1rem;}
+	.carousel-caption h2{font-family: 'Georgia';font-size: 0.7rem;font-weight: 600;letter-spacing: 0.1rem;margin-top:-8px;}
+	#team{width: 88%;}
+	#team p{font-size: 0.7rem;}
+	#team .card i{font-size: 3.1rem;}
+	#team .card h3{font-size: 1.0rem;}
+	.barras{width: 50px; height: 1.5px; margin-top: 15px; margin-left: 1px}
+	.barras2{width: 50px;height: 1.5px;margin-top: 15px;margin-left: -50px;}
+	#cosas .redes button{
+		font-size: 100%;
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 350px){
+	#navbar .collapse ul li .nav-link{width: 60%;}
+    .carousel-caption h1{font-family: 'Georgia';font-size: 0.8rem;font-weight: 600;letter-spacing: 0.1rem;}
+    .carousel-caption h2{font-family: 'Georgia';font-size: 0.6rem;font-weight: 600;letter-spacing: 0.1rem;margin-top:-8px;}
+    .barras{display:none;}
+    .barras2{display:none;}
+    #cosas .redes button{
+        font-size: 100%;
+        width: 200px;
+    }
+	#cosas .button_material a button{font-size: 12px;}
+}
+
+.contenedor::-webkit-scrollbar {
+	width: 7px;
+	background: #008000;
+}

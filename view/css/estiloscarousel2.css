@@ -1,0 +1,223 @@
+
+
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-directivo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-directivo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-directivo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-directivo-controles .indicadores button:hover,
+.contenedor-directivo-controles .indicadores button.activo {
+	background: green;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.directivos {
+	margin-bottom: 10px;
+}
+
+.directivos .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.directivos .contenedor-principal .flecha-izquierda,
+.directivos .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 30%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 40px;
+	color: #00B573;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.directivos .contenedor-principal .flecha-izquierda:hover,
+.directivos .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.directivos.contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.directivos .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.directivos .contenedor-carousel {
+	width: 100%;
+	padding: 5px ;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.directivos .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.directivos .contenedor-carousel .carousel .directivo {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0);
+	padding: 0px 5px;
+}
+
+.directivos .contenedor-carousel .carousel .directivo.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.directivos .contenedor-carousel .carousel .directivo img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 1400px) {
+	
+	.directivos .contenedor-principal .flecha-izquierda,
+	.directivos .contenedor-principal .flecha-derecha {
+		position: absolute;
+		border: none;
+		background: rgba(0,0,0,0.3);
+		font-size: 40px;
+		height: 20%;
+		top: calc(50% - 15%);
+		line-height: 40px;
+		width: 30px;
+		color: #00B573;
+		cursor: pointer;
+		z-index: 500;
+		transition: .2s ease all;
+	}
+
+	.directivos .contenedor-carousel .carousel .directivo {
+		min-width: 25%;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 0px rgba(0,0,0,0);
+		padding: 0px 2px;
+	}
+	
+
+}
+@media screen and (max-width: 1200px) {
+	
+	.directivos .contenedor-principal .flecha-izquierda,
+	.directivos .contenedor-principal .flecha-derecha {
+		position: absolute;
+		border: none;
+		background: rgba(0,0,0,0.3);
+		font-size: 40px;
+		height: 20%;
+		top: calc(50% - 10%);
+		line-height: 40px;
+		width: 30px;
+		color: #00B573;
+		cursor: pointer;
+		z-index: 500;
+		transition: .2s ease all;
+	}
+
+	.directivos .contenedor-carousel .carousel .directivo {
+		min-width: 33.7%;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 0px rgba(0,0,0,0);
+		padding: 0px 2px;
+	}
+	
+
+}
+@media screen and (max-width: 800px) {
+	
+	.directivos .contenedor-principal .flecha-izquierda,
+	.directivos .contenedor-principal .flecha-derecha {
+		position: absolute;
+		border: none;
+		background: rgba(0,0,0,0.3);
+		font-size: 40px;
+		height: 20%;
+		top: calc(50% - 10%);
+		line-height: 40px;
+		width: 30px;
+		color: #00B573;
+		cursor: pointer;
+		z-index: 500;
+		transition: .2s ease all;
+	}
+
+	.directivos .contenedor-carousel .carousel .directivo {
+		min-width: 50.7%;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 0px rgba(0,0,0,0);
+		padding: 0px 2px;
+	}
+	.directivos .contenedor-carousel .carousel .directivo h4{
+		font-size:110% ;
+	}
+
+}
+@media screen and (max-width: 500px) {
+	
+	.directivos .contenedor-principal .flecha-izquierda,
+	.directivos .contenedor-principal .flecha-derecha {
+		position: absolute;
+		border: none;
+		background: rgba(0,0,0,0.3);
+		font-size: 40px;
+		height: 20%;
+		top: calc(50% - 10%);
+		line-height: 40px;
+		width: 30px;
+		color: #00B573;
+		cursor: pointer;
+		z-index: 500;
+		transition: .2s ease all;
+	}
+
+	.directivos .contenedor-carousel .carousel .directivo {
+		min-width: 102%;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 0px rgba(0,0,0,0);
+		padding: 0px 2px;
+	}
+	.directivos .contenedor-carousel .carousel .directivo p{
+		font-size: 100%!important;
+		text-align: center;
+	}
+	.directivos .contenedor-carousel .carousel .directivo h4{
+		font-size: 160%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.directivos .contenedor-carousel .carousel .directivo h4{
+		font-size: 120%;
+	}
+}
